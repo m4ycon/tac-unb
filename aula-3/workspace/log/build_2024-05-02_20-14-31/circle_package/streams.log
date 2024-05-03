@@ -1,0 +1,21 @@
+[1.921s] Invoking command in '/home/maycon/repositorios/tac-unb/aula-3/workspace/src/circle_package': PYTHONPATH=/home/maycon/repositorios/tac-unb/aula-3/workspace/build/circle_package/prefix_override:/home/maycon/repositorios/tac-unb/aula-3/workspace/install/circle_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/circle_package build --build-base /home/maycon/repositorios/tac-unb/aula-3/workspace/build/circle_package/build install --record /home/maycon/repositorios/tac-unb/aula-3/workspace/build/circle_package/install.log --single-version-externally-managed install_data
+[2.453s] running egg_info
+[2.453s] writing ../../build/circle_package/circle_package.egg-info/PKG-INFO
+[2.454s] writing dependency_links to ../../build/circle_package/circle_package.egg-info/dependency_links.txt
+[2.454s] writing entry points to ../../build/circle_package/circle_package.egg-info/entry_points.txt
+[2.454s] writing requirements to ../../build/circle_package/circle_package.egg-info/requires.txt
+[2.454s] writing top-level names to ../../build/circle_package/circle_package.egg-info/top_level.txt
+[2.458s] reading manifest file '../../build/circle_package/circle_package.egg-info/SOURCES.txt'
+[2.460s] writing manifest file '../../build/circle_package/circle_package.egg-info/SOURCES.txt'
+[2.460s] running build
+[2.460s] running build_py
+[2.462s] running install
+[2.463s] running install_lib
+[2.464s] running install_data
+[2.465s] running install_egg_info
+[2.468s] removing '/home/maycon/repositorios/tac-unb/aula-3/workspace/install/circle_package/lib/python3.10/site-packages/circle_package-0.0.0-py3.10.egg-info' (and everything under it)
+[2.469s] Copying ../../build/circle_package/circle_package.egg-info to /home/maycon/repositorios/tac-unb/aula-3/workspace/install/circle_package/lib/python3.10/site-packages/circle_package-0.0.0-py3.10.egg-info
+[2.471s] running install_scripts
+[2.514s] Installing circle script to /home/maycon/repositorios/tac-unb/aula-3/workspace/install/circle_package/lib/circle_package
+[2.516s] writing list of installed files to '/home/maycon/repositorios/tac-unb/aula-3/workspace/build/circle_package/install.log'
+[2.584s] Invoked command in '/home/maycon/repositorios/tac-unb/aula-3/workspace/src/circle_package' returned '0': PYTHONPATH=/home/maycon/repositorios/tac-unb/aula-3/workspace/build/circle_package/prefix_override:/home/maycon/repositorios/tac-unb/aula-3/workspace/install/circle_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/circle_package build --build-base /home/maycon/repositorios/tac-unb/aula-3/workspace/build/circle_package/build install --record /home/maycon/repositorios/tac-unb/aula-3/workspace/build/circle_package/install.log --single-version-externally-managed install_data

@@ -1,0 +1,35 @@
+running egg_info
+creating ../../build/package/package.egg-info
+writing ../../build/package/package.egg-info/PKG-INFO
+writing dependency_links to ../../build/package/package.egg-info/dependency_links.txt
+writing entry points to ../../build/package/package.egg-info/entry_points.txt
+writing requirements to ../../build/package/package.egg-info/requires.txt
+writing top-level names to ../../build/package/package.egg-info/top_level.txt
+writing manifest file '../../build/package/package.egg-info/SOURCES.txt'
+reading manifest file '../../build/package/package.egg-info/SOURCES.txt'
+writing manifest file '../../build/package/package.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/maycon/repositorios/tac-unb/aula-3/workspace/build/package/build
+creating /home/maycon/repositorios/tac-unb/aula-3/workspace/build/package/build/lib
+creating /home/maycon/repositorios/tac-unb/aula-3/workspace/build/package/build/lib/package
+copying package/__init__.py -> /home/maycon/repositorios/tac-unb/aula-3/workspace/build/package/build/lib/package
+copying package/node.py -> /home/maycon/repositorios/tac-unb/aula-3/workspace/build/package/build/lib/package
+running install
+running install_lib
+creating /home/maycon/repositorios/tac-unb/aula-3/workspace/install/package/lib/python3.10/site-packages/package
+copying /home/maycon/repositorios/tac-unb/aula-3/workspace/build/package/build/lib/package/__init__.py -> /home/maycon/repositorios/tac-unb/aula-3/workspace/install/package/lib/python3.10/site-packages/package
+copying /home/maycon/repositorios/tac-unb/aula-3/workspace/build/package/build/lib/package/node.py -> /home/maycon/repositorios/tac-unb/aula-3/workspace/install/package/lib/python3.10/site-packages/package
+byte-compiling /home/maycon/repositorios/tac-unb/aula-3/workspace/install/package/lib/python3.10/site-packages/package/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/maycon/repositorios/tac-unb/aula-3/workspace/install/package/lib/python3.10/site-packages/package/node.py to node.cpython-310.pyc
+running install_data
+creating /home/maycon/repositorios/tac-unb/aula-3/workspace/install/package/share/ament_index
+creating /home/maycon/repositorios/tac-unb/aula-3/workspace/install/package/share/ament_index/resource_index
+creating /home/maycon/repositorios/tac-unb/aula-3/workspace/install/package/share/ament_index/resource_index/packages
+copying resource/package -> /home/maycon/repositorios/tac-unb/aula-3/workspace/install/package/share/ament_index/resource_index/packages
+copying package.xml -> /home/maycon/repositorios/tac-unb/aula-3/workspace/install/package/share/package
+running install_egg_info
+Copying ../../build/package/package.egg-info to /home/maycon/repositorios/tac-unb/aula-3/workspace/install/package/lib/python3.10/site-packages/package-0.0.0-py3.10.egg-info
+running install_scripts
+Installing node script to /home/maycon/repositorios/tac-unb/aula-3/workspace/install/package/lib/package
+writing list of installed files to '/home/maycon/repositorios/tac-unb/aula-3/workspace/build/package/install.log'

@@ -1,0 +1,122 @@
+[0.007s] Invoking command in '/home/maycon/repositorios/tac-unb/aula-2/ws/build/ign_ros2_control_demos': AMENT_PREFIX_PATH=/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control:/opt/ros/humble:/home/maycon/repositorios/tac-unb/aula-2/ws/install/my_package LD_LIBRARY_PATH=/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/lib:${LD_LIBRARY_PATH} /usr/bin/cmake /home/maycon/repositorios/tac-unb/aula-2/ws/src/gz_ros2_control/ign_ros2_control_demos -DCMAKE_INSTALL_PREFIX=/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos
+[0.047s] -- The C compiler identification is GNU 11.4.0
+[0.086s] -- The CXX compiler identification is GNU 11.4.0
+[0.092s] -- Detecting C compiler ABI info
+[0.143s] -- Detecting C compiler ABI info - done
+[0.150s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.150s] -- Detecting C compile features
+[0.150s] -- Detecting C compile features - done
+[0.153s] -- Detecting CXX compiler ABI info
+[0.212s] -- Detecting CXX compiler ABI info - done
+[0.218s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.218s] -- Detecting CXX compile features
+[0.219s] -- Detecting CXX compile features - done
+[0.220s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.331s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.403s] -- Found control_msgs: 4.4.0 (/opt/ros/humble/share/control_msgs/cmake)
+[0.429s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.432s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.439s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.449s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.462s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.853s] -- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)
+[0.900s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.902s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.978s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.998s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.034s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.041s] -- Looking for pthread.h
+[1.093s] -- Looking for pthread.h - found
+[1.093s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.147s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.148s] -- Found Threads: TRUE  
+[1.240s] -- Found rclcpp_action: 16.0.8 (/opt/ros/humble/share/rclcpp_action/cmake)
+[1.265s] -- Found ament_cmake_gtest: 1.3.8 (/opt/ros/humble/share/ament_cmake_gtest/cmake)
+[1.266s] -- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.323s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.324s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.324s] -- Configured cppcheck include dirs: 
+[1.324s] -- Configured cppcheck exclude dirs and/or files: 
+[1.325s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[1.325s] -- Configured cpplint exclude dirs and/or files: 
+[1.326s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.326s] -- Added test 'lint_cmake' to check CMake code style
+[1.327s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.328s] -- Added test 'uncrustify' to check C / C++ code style
+[1.328s] -- Configured uncrustify additional arguments: 
+[1.328s] -- Added test 'xmllint' to check XML markup files
+[1.329s] -- Configuring done
+[1.346s] -- Generating done
+[1.347s] -- Build files have been written to: /home/maycon/repositorios/tac-unb/aula-2/ws/build/ign_ros2_control_demos
+[1.357s] Invoked command in '/home/maycon/repositorios/tac-unb/aula-2/ws/build/ign_ros2_control_demos' returned '0': AMENT_PREFIX_PATH=/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control:/opt/ros/humble:/home/maycon/repositorios/tac-unb/aula-2/ws/install/my_package LD_LIBRARY_PATH=/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/lib:${LD_LIBRARY_PATH} /usr/bin/cmake /home/maycon/repositorios/tac-unb/aula-2/ws/src/gz_ros2_control/ign_ros2_control_demos -DCMAKE_INSTALL_PREFIX=/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos
+[1.358s] Invoking command in '/home/maycon/repositorios/tac-unb/aula-2/ws/build/ign_ros2_control_demos': AMENT_PREFIX_PATH=/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control:/opt/ros/humble:/home/maycon/repositorios/tac-unb/aula-2/ws/install/my_package LD_LIBRARY_PATH=/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/maycon/repositorios/tac-unb/aula-2/ws/build/ign_ros2_control_demos -- -j8 -l8
+[1.399s] [  8%] [32mBuilding CXX object CMakeFiles/example_gripper.dir/examples/example_gripper.cpp.o[0m
+[1.399s] [ 16%] [32mBuilding CXX object CMakeFiles/example_effort.dir/examples/example_effort.cpp.o[0m
+[1.401s] [ 33%] [32mBuilding CXX object CMakeFiles/example_velocity.dir/examples/example_velocity.cpp.o[0m
+[1.401s] [ 41%] [32mBuilding CXX object CMakeFiles/example_diff_drive.dir/examples/example_diff_drive.cpp.o[0m
+[1.401s] [ 41%] [32mBuilding CXX object CMakeFiles/example_position.dir/examples/example_position.cpp.o[0m
+[1.402s] [ 50%] [32mBuilding CXX object CMakeFiles/example_tricycle_drive.dir/examples/example_tricycle_drive.cpp.o[0m
+[6.708s] [ 58%] [32m[1mLinking CXX executable example_effort[0m
+[6.723s] [ 66%] [32m[1mLinking CXX executable example_diff_drive[0m
+[6.860s] [ 75%] [32m[1mLinking CXX executable example_position[0m
+[6.863s] [ 83%] [32m[1mLinking CXX executable example_gripper[0m
+[6.955s] [ 83%] Built target example_diff_drive
+[6.959s] [ 91%] [32m[1mLinking CXX executable example_tricycle_drive[0m
+[6.965s] [ 91%] Built target example_effort
+[7.072s] [ 91%] Built target example_gripper
+[7.103s] [ 91%] Built target example_position
+[7.122s] [100%] [32m[1mLinking CXX executable example_velocity[0m
+[7.135s] [100%] Built target example_tricycle_drive
+[7.256s] [100%] Built target example_velocity
+[7.264s] Invoked command in '/home/maycon/repositorios/tac-unb/aula-2/ws/build/ign_ros2_control_demos' returned '0': AMENT_PREFIX_PATH=/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control:/opt/ros/humble:/home/maycon/repositorios/tac-unb/aula-2/ws/install/my_package LD_LIBRARY_PATH=/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/maycon/repositorios/tac-unb/aula-2/ws/build/ign_ros2_control_demos -- -j8 -l8
+[7.293s] Invoking command in '/home/maycon/repositorios/tac-unb/aula-2/ws/build/ign_ros2_control_demos': AMENT_PREFIX_PATH=/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control:/opt/ros/humble:/home/maycon/repositorios/tac-unb/aula-2/ws/install/my_package LD_LIBRARY_PATH=/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/maycon/repositorios/tac-unb/aula-2/ws/build/ign_ros2_control_demos
+[7.299s] -- Install configuration: ""
+[7.299s] -- Installing: /home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos//launch
+[7.299s] -- Installing: /home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos//launch/cart_example_position.launch.py
+[7.299s] -- Installing: /home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos//launch/cart_example_effort.launch.py
+[7.299s] -- Installing: /home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos//launch/gripper_mimic_joint_example.launch.py
+[7.299s] -- Installing: /home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos//launch/diff_drive_example.launch.py
+[7.299s] -- Installing: /home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos//launch/tricycle_drive_example.launch.py
+[7.299s] -- Installing: /home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos//launch/cart_example_velocity.launch.py
+[7.299s] -- Installing: /home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos//config
+[7.299s] -- Installing: /home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos//config/tricycle_drive_controller.yaml
+[7.300s] -- Installing: /home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos//config/gripper_controller.yaml
+[7.300s] -- Installing: /home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos//config/cart_controller_position.yaml
+[7.300s] -- Installing: /home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos//config/cart_controller_velocity.yaml
+[7.300s] -- Installing: /home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos//config/diff_drive_controller_velocity.yaml
+[7.300s] -- Installing: /home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos//config/cart_controller_effort.yaml
+[7.300s] -- Installing: /home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos//urdf
+[7.300s] -- Installing: /home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos//urdf/test_diff_drive.xacro.urdf
+[7.300s] -- Installing: /home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos//urdf/test_cart_velocity.xacro.urdf
+[7.301s] -- Installing: /home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos//urdf/test_gripper_mimic_joint.xacro.urdf
+[7.301s] -- Installing: /home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos//urdf/test_tricycle_drive.xacro.urdf
+[7.301s] -- Installing: /home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos//urdf/test_cart_effort.xacro.urdf
+[7.301s] -- Installing: /home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos//urdf/test_cart_position.xacro.urdf
+[7.301s] -- Installing: /home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/lib/ign_ros2_control_demos/example_position
+[7.302s] -- Set runtime path of "/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/lib/ign_ros2_control_demos/example_position" to ""
+[7.302s] -- Installing: /home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/lib/ign_ros2_control_demos/example_velocity
+[7.303s] -- Set runtime path of "/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/lib/ign_ros2_control_demos/example_velocity" to ""
+[7.303s] -- Installing: /home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/lib/ign_ros2_control_demos/example_effort
+[7.304s] -- Set runtime path of "/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/lib/ign_ros2_control_demos/example_effort" to ""
+[7.304s] -- Installing: /home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/lib/ign_ros2_control_demos/example_diff_drive
+[7.304s] -- Set runtime path of "/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/lib/ign_ros2_control_demos/example_diff_drive" to ""
+[7.305s] -- Installing: /home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/lib/ign_ros2_control_demos/example_tricycle_drive
+[7.305s] -- Set runtime path of "/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/lib/ign_ros2_control_demos/example_tricycle_drive" to ""
+[7.305s] -- Installing: /home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/lib/ign_ros2_control_demos/example_gripper
+[7.306s] -- Set runtime path of "/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/lib/ign_ros2_control_demos/example_gripper" to ""
+[7.306s] -- Installing: /home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ament_index/resource_index/package_run_dependencies/ign_ros2_control_demos
+[7.306s] -- Installing: /home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ament_index/resource_index/parent_prefix_path/ign_ros2_control_demos
+[7.306s] -- Installing: /home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos/environment/ament_prefix_path.sh
+[7.306s] -- Installing: /home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos/environment/ament_prefix_path.dsv
+[7.306s] -- Installing: /home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos/environment/path.sh
+[7.307s] -- Installing: /home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos/environment/path.dsv
+[7.307s] -- Installing: /home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos/local_setup.bash
+[7.307s] -- Installing: /home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos/local_setup.sh
+[7.307s] -- Installing: /home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos/local_setup.zsh
+[7.307s] -- Installing: /home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos/local_setup.dsv
+[7.307s] -- Installing: /home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos/package.dsv
+[7.307s] -- Installing: /home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ament_index/resource_index/packages/ign_ros2_control_demos
+[7.307s] -- Installing: /home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos/cmake/ign_ros2_control_demosConfig.cmake
+[7.307s] -- Installing: /home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos/cmake/ign_ros2_control_demosConfig-version.cmake
+[7.307s] -- Installing: /home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos/package.xml
+[7.309s] Invoked command in '/home/maycon/repositorios/tac-unb/aula-2/ws/build/ign_ros2_control_demos' returned '0': AMENT_PREFIX_PATH=/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control:/opt/ros/humble:/home/maycon/repositorios/tac-unb/aula-2/ws/install/my_package LD_LIBRARY_PATH=/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/maycon/repositorios/tac-unb/aula-2/ws/build/ign_ros2_control_demos

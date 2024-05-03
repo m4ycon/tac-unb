@@ -1,0 +1,21 @@
+[0.595s] Invoking command in '/home/maycon/repositorios/tac-unb/tarefa2/src/square_package': PYTHONPATH=/home/maycon/repositorios/tac-unb/tarefa2/build/square_package/prefix_override:/home/maycon/repositorios/tac-unb/tarefa2/install/square_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/square_package build --build-base /home/maycon/repositorios/tac-unb/tarefa2/build/square_package/build install --record /home/maycon/repositorios/tac-unb/tarefa2/build/square_package/install.log --single-version-externally-managed install_data
+[0.748s] running egg_info
+[0.748s] writing ../../build/square_package/square_package.egg-info/PKG-INFO
+[0.748s] writing dependency_links to ../../build/square_package/square_package.egg-info/dependency_links.txt
+[0.748s] writing entry points to ../../build/square_package/square_package.egg-info/entry_points.txt
+[0.748s] writing requirements to ../../build/square_package/square_package.egg-info/requires.txt
+[0.748s] writing top-level names to ../../build/square_package/square_package.egg-info/top_level.txt
+[0.750s] reading manifest file '../../build/square_package/square_package.egg-info/SOURCES.txt'
+[0.750s] writing manifest file '../../build/square_package/square_package.egg-info/SOURCES.txt'
+[0.750s] running build
+[0.750s] running build_py
+[0.750s] running install
+[0.751s] running install_lib
+[0.751s] running install_data
+[0.751s] running install_egg_info
+[0.753s] removing '/home/maycon/repositorios/tac-unb/tarefa2/install/square_package/lib/python3.10/site-packages/square_package-0.0.0-py3.10.egg-info' (and everything under it)
+[0.753s] Copying ../../build/square_package/square_package.egg-info to /home/maycon/repositorios/tac-unb/tarefa2/install/square_package/lib/python3.10/site-packages/square_package-0.0.0-py3.10.egg-info
+[0.753s] running install_scripts
+[0.768s] Installing square script to /home/maycon/repositorios/tac-unb/tarefa2/install/square_package/lib/square_package
+[0.768s] writing list of installed files to '/home/maycon/repositorios/tac-unb/tarefa2/build/square_package/install.log'
+[0.790s] Invoked command in '/home/maycon/repositorios/tac-unb/tarefa2/src/square_package' returned '0': PYTHONPATH=/home/maycon/repositorios/tac-unb/tarefa2/build/square_package/prefix_override:/home/maycon/repositorios/tac-unb/tarefa2/install/square_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/square_package build --build-base /home/maycon/repositorios/tac-unb/tarefa2/build/square_package/build install --record /home/maycon/repositorios/tac-unb/tarefa2/build/square_package/install.log --single-version-externally-managed install_data

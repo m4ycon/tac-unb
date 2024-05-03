@@ -1,0 +1,22 @@
+[0.676s] Invoking command in '/home/maycon/repositorios/tac-unb/aula-2/ws/src/my_package': PYTHONPATH=/home/maycon/repositorios/tac-unb/aula-2/ws/build/my_package/prefix_override:/home/maycon/repositorios/tac-unb/aula-2/ws/install/my_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/my_package build --build-base /home/maycon/repositorios/tac-unb/aula-2/ws/build/my_package/build install --record /home/maycon/repositorios/tac-unb/aula-2/ws/build/my_package/install.log --single-version-externally-managed install_data
+[0.867s] running egg_info
+[0.868s] writing ../../build/my_package/my_package.egg-info/PKG-INFO
+[0.868s] writing dependency_links to ../../build/my_package/my_package.egg-info/dependency_links.txt
+[0.868s] writing entry points to ../../build/my_package/my_package.egg-info/entry_points.txt
+[0.868s] writing requirements to ../../build/my_package/my_package.egg-info/requires.txt
+[0.868s] writing top-level names to ../../build/my_package/my_package.egg-info/top_level.txt
+[0.870s] reading manifest file '../../build/my_package/my_package.egg-info/SOURCES.txt'
+[0.871s] writing manifest file '../../build/my_package/my_package.egg-info/SOURCES.txt'
+[0.871s] running build
+[0.871s] running build_py
+[0.871s] running install
+[0.871s] running install_lib
+[0.872s] running install_data
+[0.872s] running install_egg_info
+[0.874s] removing '/home/maycon/repositorios/tac-unb/aula-2/ws/install/my_package/lib/python3.10/site-packages/my_package-0.0.0-py3.10.egg-info' (and everything under it)
+[0.874s] Copying ../../build/my_package/my_package.egg-info to /home/maycon/repositorios/tac-unb/aula-2/ws/install/my_package/lib/python3.10/site-packages/my_package-0.0.0-py3.10.egg-info
+[0.875s] running install_scripts
+[0.891s] Installing listener script to /home/maycon/repositorios/tac-unb/aula-2/ws/install/my_package/lib/my_package
+[0.891s] Installing talker script to /home/maycon/repositorios/tac-unb/aula-2/ws/install/my_package/lib/my_package
+[0.892s] writing list of installed files to '/home/maycon/repositorios/tac-unb/aula-2/ws/build/my_package/install.log'
+[0.912s] Invoked command in '/home/maycon/repositorios/tac-unb/aula-2/ws/src/my_package' returned '0': PYTHONPATH=/home/maycon/repositorios/tac-unb/aula-2/ws/build/my_package/prefix_override:/home/maycon/repositorios/tac-unb/aula-2/ws/install/my_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/my_package build --build-base /home/maycon/repositorios/tac-unb/aula-2/ws/build/my_package/build install --record /home/maycon/repositorios/tac-unb/aula-2/ws/build/my_package/install.log --single-version-externally-managed install_data

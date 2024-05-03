@@ -1,0 +1,24 @@
+[10.419s] Invoking command in '/home/maycon/repositorios/tac-unb/aula-3/workspace/src/explore_pkg': PYTHONPATH=/home/maycon/repositorios/tac-unb/aula-3/workspace/build/explore_pkg/prefix_override:/home/maycon/repositorios/tac-unb/aula-3/workspace/install/explore_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/explore_pkg build --build-base /home/maycon/repositorios/tac-unb/aula-3/workspace/build/explore_pkg/build install --record /home/maycon/repositorios/tac-unb/aula-3/workspace/build/explore_pkg/install.log --single-version-externally-managed install_data
+[11.835s] running egg_info
+[11.836s] writing ../../build/explore_pkg/explore_pkg.egg-info/PKG-INFO
+[11.836s] writing dependency_links to ../../build/explore_pkg/explore_pkg.egg-info/dependency_links.txt
+[11.837s] writing entry points to ../../build/explore_pkg/explore_pkg.egg-info/entry_points.txt
+[11.837s] writing requirements to ../../build/explore_pkg/explore_pkg.egg-info/requires.txt
+[11.837s] writing top-level names to ../../build/explore_pkg/explore_pkg.egg-info/top_level.txt
+[11.841s] reading manifest file '../../build/explore_pkg/explore_pkg.egg-info/SOURCES.txt'
+[11.845s] writing manifest file '../../build/explore_pkg/explore_pkg.egg-info/SOURCES.txt'
+[11.845s] running build
+[11.845s] running build_py
+[11.848s] copying explore_pkg/explore.py -> /home/maycon/repositorios/tac-unb/aula-3/workspace/build/explore_pkg/build/lib/explore_pkg
+[11.855s] running install
+[11.855s] running install_lib
+[11.857s] copying /home/maycon/repositorios/tac-unb/aula-3/workspace/build/explore_pkg/build/lib/explore_pkg/explore.py -> /home/maycon/repositorios/tac-unb/aula-3/workspace/install/explore_pkg/lib/python3.10/site-packages/explore_pkg
+[11.864s] byte-compiling /home/maycon/repositorios/tac-unb/aula-3/workspace/install/explore_pkg/lib/python3.10/site-packages/explore_pkg/explore.py to explore.cpython-310.pyc
+[11.868s] running install_data
+[11.869s] running install_egg_info
+[11.873s] removing '/home/maycon/repositorios/tac-unb/aula-3/workspace/install/explore_pkg/lib/python3.10/site-packages/explore_pkg-0.0.0-py3.10.egg-info' (and everything under it)
+[11.876s] Copying ../../build/explore_pkg/explore_pkg.egg-info to /home/maycon/repositorios/tac-unb/aula-3/workspace/install/explore_pkg/lib/python3.10/site-packages/explore_pkg-0.0.0-py3.10.egg-info
+[11.878s] running install_scripts
+[12.012s] Installing explore script to /home/maycon/repositorios/tac-unb/aula-3/workspace/install/explore_pkg/lib/explore_pkg
+[12.013s] writing list of installed files to '/home/maycon/repositorios/tac-unb/aula-3/workspace/build/explore_pkg/install.log'
+[12.160s] Invoked command in '/home/maycon/repositorios/tac-unb/aula-3/workspace/src/explore_pkg' returned '0': PYTHONPATH=/home/maycon/repositorios/tac-unb/aula-3/workspace/build/explore_pkg/prefix_override:/home/maycon/repositorios/tac-unb/aula-3/workspace/install/explore_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/explore_pkg build --build-base /home/maycon/repositorios/tac-unb/aula-3/workspace/build/explore_pkg/build install --record /home/maycon/repositorios/tac-unb/aula-3/workspace/build/explore_pkg/install.log --single-version-externally-managed install_data

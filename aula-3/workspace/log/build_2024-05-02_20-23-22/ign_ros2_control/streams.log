@@ -1,0 +1,35 @@
+[0.093s] Invoking command in '/home/maycon/repositorios/tac-unb/aula-3/workspace/build/ign_ros2_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/maycon/repositorios/tac-unb/aula-3/workspace/install/square_package:/home/maycon/repositorios/tac-unb/aula-3/workspace/install/package:/home/maycon/repositorios/tac-unb/aula-3/workspace/install/explore_pkg:/home/maycon/repositorios/tac-unb/aula-3/workspace/install/circle_package:/opt/ros/humble /usr/bin/cmake --build /home/maycon/repositorios/tac-unb/aula-3/workspace/build/ign_ros2_control -- -j8 -l8
+[2.644s] [100%] Built target ign_ros2_control-system
+[2.644s] [100%] Built target ign_hardware_plugins
+[2.647s] Invoked command in '/home/maycon/repositorios/tac-unb/aula-3/workspace/build/ign_ros2_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/maycon/repositorios/tac-unb/aula-3/workspace/install/square_package:/home/maycon/repositorios/tac-unb/aula-3/workspace/install/package:/home/maycon/repositorios/tac-unb/aula-3/workspace/install/explore_pkg:/home/maycon/repositorios/tac-unb/aula-3/workspace/install/circle_package:/opt/ros/humble /usr/bin/cmake --build /home/maycon/repositorios/tac-unb/aula-3/workspace/build/ign_ros2_control -- -j8 -l8
+[2.944s] Invoking command in '/home/maycon/repositorios/tac-unb/aula-3/workspace/build/ign_ros2_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/maycon/repositorios/tac-unb/aula-3/workspace/install/square_package:/home/maycon/repositorios/tac-unb/aula-3/workspace/install/package:/home/maycon/repositorios/tac-unb/aula-3/workspace/install/explore_pkg:/home/maycon/repositorios/tac-unb/aula-3/workspace/install/circle_package:/opt/ros/humble /usr/bin/cmake --install /home/maycon/repositorios/tac-unb/aula-3/workspace/build/ign_ros2_control
+[2.977s] -- Install configuration: ""
+[2.978s] -- Up-to-date: /home/maycon/repositorios/tac-unb/aula-3/workspace/install/ign_ros2_control/lib/libign_hardware_plugins.so
+[2.979s] -- Up-to-date: /home/maycon/repositorios/tac-unb/aula-3/workspace/install/ign_ros2_control/include
+[2.979s] -- Up-to-date: /home/maycon/repositorios/tac-unb/aula-3/workspace/install/ign_ros2_control/include/ign_ros2_control
+[2.980s] -- Up-to-date: /home/maycon/repositorios/tac-unb/aula-3/workspace/install/ign_ros2_control/include/ign_ros2_control/ign_ros2_control_plugin.hpp
+[2.980s] -- Up-to-date: /home/maycon/repositorios/tac-unb/aula-3/workspace/install/ign_ros2_control/include/ign_ros2_control/ign_system.hpp
+[2.980s] -- Up-to-date: /home/maycon/repositorios/tac-unb/aula-3/workspace/install/ign_ros2_control/include/ign_ros2_control/ign_system_interface.hpp
+[2.982s] -- Up-to-date: /home/maycon/repositorios/tac-unb/aula-3/workspace/install/ign_ros2_control/share/ign_ros2_control/environment/library_path.sh
+[2.982s] -- Up-to-date: /home/maycon/repositorios/tac-unb/aula-3/workspace/install/ign_ros2_control/share/ign_ros2_control/environment/library_path.dsv
+[2.984s] -- Up-to-date: /home/maycon/repositorios/tac-unb/aula-3/workspace/install/ign_ros2_control/lib/libign_ros2_control-system.so
+[2.984s] -- Up-to-date: /home/maycon/repositorios/tac-unb/aula-3/workspace/install/ign_ros2_control/share/ign_ros2_control/ign_hardware_plugins.xml
+[2.985s] -- Up-to-date: /home/maycon/repositorios/tac-unb/aula-3/workspace/install/ign_ros2_control/share/ament_index/resource_index/package_run_dependencies/ign_ros2_control
+[2.987s] -- Up-to-date: /home/maycon/repositorios/tac-unb/aula-3/workspace/install/ign_ros2_control/share/ament_index/resource_index/parent_prefix_path/ign_ros2_control
+[2.989s] -- Up-to-date: /home/maycon/repositorios/tac-unb/aula-3/workspace/install/ign_ros2_control/share/ign_ros2_control/environment/ament_prefix_path.sh
+[2.989s] -- Up-to-date: /home/maycon/repositorios/tac-unb/aula-3/workspace/install/ign_ros2_control/share/ign_ros2_control/environment/ament_prefix_path.dsv
+[2.990s] -- Up-to-date: /home/maycon/repositorios/tac-unb/aula-3/workspace/install/ign_ros2_control/share/ign_ros2_control/environment/path.sh
+[2.990s] -- Up-to-date: /home/maycon/repositorios/tac-unb/aula-3/workspace/install/ign_ros2_control/share/ign_ros2_control/environment/path.dsv
+[2.990s] -- Up-to-date: /home/maycon/repositorios/tac-unb/aula-3/workspace/install/ign_ros2_control/share/ign_ros2_control/local_setup.bash
+[2.990s] -- Up-to-date: /home/maycon/repositorios/tac-unb/aula-3/workspace/install/ign_ros2_control/share/ign_ros2_control/local_setup.sh
+[2.990s] -- Up-to-date: /home/maycon/repositorios/tac-unb/aula-3/workspace/install/ign_ros2_control/share/ign_ros2_control/local_setup.zsh
+[2.990s] -- Up-to-date: /home/maycon/repositorios/tac-unb/aula-3/workspace/install/ign_ros2_control/share/ign_ros2_control/local_setup.dsv
+[2.990s] -- Installing: /home/maycon/repositorios/tac-unb/aula-3/workspace/install/ign_ros2_control/share/ign_ros2_control/package.dsv
+[2.992s] -- Up-to-date: /home/maycon/repositorios/tac-unb/aula-3/workspace/install/ign_ros2_control/share/ament_index/resource_index/packages/ign_ros2_control
+[2.992s] -- Up-to-date: /home/maycon/repositorios/tac-unb/aula-3/workspace/install/ign_ros2_control/share/ament_index/resource_index/ign_ros2_control__pluginlib__plugin/ign_ros2_control
+[2.994s] -- Up-to-date: /home/maycon/repositorios/tac-unb/aula-3/workspace/install/ign_ros2_control/share/ign_ros2_control/cmake/ament_cmake_export_include_directories-extras.cmake
+[2.994s] -- Up-to-date: /home/maycon/repositorios/tac-unb/aula-3/workspace/install/ign_ros2_control/share/ign_ros2_control/cmake/ament_cmake_export_libraries-extras.cmake
+[2.994s] -- Up-to-date: /home/maycon/repositorios/tac-unb/aula-3/workspace/install/ign_ros2_control/share/ign_ros2_control/cmake/ign_ros2_controlConfig.cmake
+[2.995s] -- Up-to-date: /home/maycon/repositorios/tac-unb/aula-3/workspace/install/ign_ros2_control/share/ign_ros2_control/cmake/ign_ros2_controlConfig-version.cmake
+[2.995s] -- Up-to-date: /home/maycon/repositorios/tac-unb/aula-3/workspace/install/ign_ros2_control/share/ign_ros2_control/package.xml
+[3.007s] Invoked command in '/home/maycon/repositorios/tac-unb/aula-3/workspace/build/ign_ros2_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/maycon/repositorios/tac-unb/aula-3/workspace/install/square_package:/home/maycon/repositorios/tac-unb/aula-3/workspace/install/package:/home/maycon/repositorios/tac-unb/aula-3/workspace/install/explore_pkg:/home/maycon/repositorios/tac-unb/aula-3/workspace/install/circle_package:/opt/ros/humble /usr/bin/cmake --install /home/maycon/repositorios/tac-unb/aula-3/workspace/build/ign_ros2_control

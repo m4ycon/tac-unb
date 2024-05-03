@@ -1,0 +1,391 @@
+[0.070s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.070s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7faada7292a0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7faada7289a0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7faada7289a0>>)
+[0.181s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.181s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.181s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.181s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.181s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.182s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.182s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/maycon/repositorios/tac-unb/aula-2/ws'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.189s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.189s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.189s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.189s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.189s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.189s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.189s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control) by extensions ['ignore', 'ignore_ament_install']
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control) by extension 'ignore'
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control) by extension 'ignore_ament_install'
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control) by extensions ['colcon_pkg']
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control) by extension 'colcon_pkg'
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control) by extensions ['colcon_meta']
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control) by extension 'colcon_meta'
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control) by extensions ['ros']
+[0.190s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control) by extension 'ros'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control) by extensions ['cmake', 'python']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control) by extension 'cmake'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control) by extension 'python'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control) by extensions ['python_setup_py']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control) by extension 'python_setup_py'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/Dockerfile) by extensions ['ignore', 'ignore_ament_install']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/Dockerfile) by extension 'ignore'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/Dockerfile) by extension 'ignore_ament_install'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/Dockerfile) by extensions ['colcon_pkg']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/Dockerfile) by extension 'colcon_pkg'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/Dockerfile) by extensions ['colcon_meta']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/Dockerfile) by extension 'colcon_meta'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/Dockerfile) by extensions ['ros']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/Dockerfile) by extension 'ros'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/Dockerfile) by extensions ['cmake', 'python']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/Dockerfile) by extension 'cmake'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/Dockerfile) by extension 'python'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/Dockerfile) by extensions ['python_setup_py']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/Dockerfile) by extension 'python_setup_py'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc) by extensions ['ignore', 'ignore_ament_install']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc) by extension 'ignore'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc) by extension 'ignore_ament_install'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc) by extensions ['colcon_pkg']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc) by extension 'colcon_pkg'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc) by extensions ['colcon_meta']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc) by extension 'colcon_meta'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc) by extensions ['ros']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc) by extension 'ros'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc) by extensions ['cmake', 'python']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc) by extension 'cmake'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc) by extension 'python'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc) by extensions ['python_setup_py']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc) by extension 'python_setup_py'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc/img) by extensions ['ignore', 'ignore_ament_install']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc/img) by extension 'ignore'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc/img) by extension 'ignore_ament_install'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc/img) by extensions ['colcon_pkg']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc/img) by extension 'colcon_pkg'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc/img) by extensions ['colcon_meta']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc/img) by extension 'colcon_meta'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc/img) by extensions ['ros']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc/img) by extension 'ros'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc/img) by extensions ['cmake', 'python']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc/img) by extension 'cmake'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc/img) by extension 'python'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc/img) by extensions ['python_setup_py']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc/img) by extension 'python_setup_py'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/gz_ros2_control_tests) by extensions ['ignore', 'ignore_ament_install']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/gz_ros2_control_tests) by extension 'ignore'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/gz_ros2_control_tests) by extension 'ignore_ament_install'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/gz_ros2_control_tests) by extensions ['colcon_pkg']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/gz_ros2_control_tests) by extension 'colcon_pkg'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/gz_ros2_control_tests) by extensions ['colcon_meta']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/gz_ros2_control_tests) by extension 'colcon_meta'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/gz_ros2_control_tests) by extensions ['ros']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/gz_ros2_control_tests) by extension 'ros'
+[0.195s] DEBUG:colcon.colcon_core.package_identification:Package 'src/gz_ros2_control/gz_ros2_control_tests' with type 'ros.ament_cmake' and name 'gz_ros2_control_tests'
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/ign_ros2_control) by extensions ['ignore', 'ignore_ament_install']
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/ign_ros2_control) by extension 'ignore'
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/ign_ros2_control) by extension 'ignore_ament_install'
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/ign_ros2_control) by extensions ['colcon_pkg']
+[0.195s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/ign_ros2_control) by extension 'colcon_pkg'
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/ign_ros2_control) by extensions ['colcon_meta']
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/ign_ros2_control) by extension 'colcon_meta'
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/ign_ros2_control) by extensions ['ros']
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/ign_ros2_control) by extension 'ros'
+[0.198s] DEBUG:colcon.colcon_core.package_identification:Package 'src/gz_ros2_control/ign_ros2_control' with type 'ros.ament_cmake' and name 'ign_ros2_control'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/ign_ros2_control_demos) by extensions ['ignore', 'ignore_ament_install']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/ign_ros2_control_demos) by extension 'ignore'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/ign_ros2_control_demos) by extension 'ignore_ament_install'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/ign_ros2_control_demos) by extensions ['colcon_pkg']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/ign_ros2_control_demos) by extension 'colcon_pkg'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/ign_ros2_control_demos) by extensions ['colcon_meta']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/ign_ros2_control_demos) by extension 'colcon_meta'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/ign_ros2_control_demos) by extensions ['ros']
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/ign_ros2_control_demos) by extension 'ros'
+[0.199s] DEBUG:colcon.colcon_core.package_identification:Package 'src/gz_ros2_control/ign_ros2_control_demos' with type 'ros.ament_cmake' and name 'ign_ros2_control_demos'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_package) by extensions ['ignore', 'ignore_ament_install']
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_package) by extension 'ignore'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_package) by extension 'ignore_ament_install'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_package) by extensions ['colcon_pkg']
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_package) by extension 'colcon_pkg'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_package) by extensions ['colcon_meta']
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_package) by extension 'colcon_meta'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_package) by extensions ['ros']
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_package) by extension 'ros'
+[0.200s] DEBUG:colcon.colcon_core.package_identification:Package 'src/my_package' with type 'ros.ament_python' and name 'my_package'
+[0.200s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.200s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.200s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.200s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.200s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.223s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.223s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.225s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 379 installed packages in /opt/ros/humble
+[0.227s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.255s] WARNING:colcon.colcon_core.package_selection:Some selected packages are already built in one or more underlay workspaces:
+	'ign_ros2_control' is in: /opt/ros/humble
+If a package in a merged underlay workspace is overridden and it installs headers, then all packages in the overlay must sort their include directories by workspace order. Failure to do so may result in build failures or undefined behavior at run time.
+If the overridden package is used by another package in any underlay, then the overriding package in the overlay must be API and ABI compatible or undefined behavior at run time may occur.
+
+If you understand the risks and want to override a package anyways, add the following to the command line:
+	--allow-overriding ign_ros2_control
+
+This may be promoted to an error in a future release of colcon-override-check.
+[0.256s] Level 5:colcon.colcon_core.verb:set package 'ign_ros2_control' build argument 'cmake_args' from command line to 'None'
+[0.256s] Level 5:colcon.colcon_core.verb:set package 'ign_ros2_control' build argument 'cmake_target' from command line to 'None'
+[0.256s] Level 5:colcon.colcon_core.verb:set package 'ign_ros2_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.256s] Level 5:colcon.colcon_core.verb:set package 'ign_ros2_control' build argument 'cmake_clean_cache' from command line to 'False'
+[0.256s] Level 5:colcon.colcon_core.verb:set package 'ign_ros2_control' build argument 'cmake_clean_first' from command line to 'False'
+[0.256s] Level 5:colcon.colcon_core.verb:set package 'ign_ros2_control' build argument 'cmake_force_configure' from command line to 'False'
+[0.256s] Level 5:colcon.colcon_core.verb:set package 'ign_ros2_control' build argument 'ament_cmake_args' from command line to 'None'
+[0.256s] Level 5:colcon.colcon_core.verb:set package 'ign_ros2_control' build argument 'catkin_cmake_args' from command line to 'None'
+[0.256s] Level 5:colcon.colcon_core.verb:set package 'ign_ros2_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.256s] DEBUG:colcon.colcon_core.verb:Building package 'ign_ros2_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/maycon/repositorios/tac-unb/aula-2/ws/build/ign_ros2_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control', 'merge_install': False, 'path': '/home/maycon/repositorios/tac-unb/aula-2/ws/src/gz_ros2_control/ign_ros2_control', 'symlink_install': False, 'test_result_base': None}
+[0.257s] Level 5:colcon.colcon_core.verb:set package 'my_package' build argument 'cmake_args' from command line to 'None'
+[0.257s] Level 5:colcon.colcon_core.verb:set package 'my_package' build argument 'cmake_target' from command line to 'None'
+[0.257s] Level 5:colcon.colcon_core.verb:set package 'my_package' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.257s] Level 5:colcon.colcon_core.verb:set package 'my_package' build argument 'cmake_clean_cache' from command line to 'False'
+[0.257s] Level 5:colcon.colcon_core.verb:set package 'my_package' build argument 'cmake_clean_first' from command line to 'False'
+[0.257s] Level 5:colcon.colcon_core.verb:set package 'my_package' build argument 'cmake_force_configure' from command line to 'False'
+[0.257s] Level 5:colcon.colcon_core.verb:set package 'my_package' build argument 'ament_cmake_args' from command line to 'None'
+[0.257s] Level 5:colcon.colcon_core.verb:set package 'my_package' build argument 'catkin_cmake_args' from command line to 'None'
+[0.257s] Level 5:colcon.colcon_core.verb:set package 'my_package' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.257s] DEBUG:colcon.colcon_core.verb:Building package 'my_package' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/maycon/repositorios/tac-unb/aula-2/ws/build/my_package', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/maycon/repositorios/tac-unb/aula-2/ws/install/my_package', 'merge_install': False, 'path': '/home/maycon/repositorios/tac-unb/aula-2/ws/src/my_package', 'symlink_install': False, 'test_result_base': None}
+[0.257s] Level 5:colcon.colcon_core.verb:set package 'gz_ros2_control_tests' build argument 'cmake_args' from command line to 'None'
+[0.257s] Level 5:colcon.colcon_core.verb:set package 'gz_ros2_control_tests' build argument 'cmake_target' from command line to 'None'
+[0.257s] Level 5:colcon.colcon_core.verb:set package 'gz_ros2_control_tests' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.257s] Level 5:colcon.colcon_core.verb:set package 'gz_ros2_control_tests' build argument 'cmake_clean_cache' from command line to 'False'
+[0.257s] Level 5:colcon.colcon_core.verb:set package 'gz_ros2_control_tests' build argument 'cmake_clean_first' from command line to 'False'
+[0.257s] Level 5:colcon.colcon_core.verb:set package 'gz_ros2_control_tests' build argument 'cmake_force_configure' from command line to 'False'
+[0.257s] Level 5:colcon.colcon_core.verb:set package 'gz_ros2_control_tests' build argument 'ament_cmake_args' from command line to 'None'
+[0.257s] Level 5:colcon.colcon_core.verb:set package 'gz_ros2_control_tests' build argument 'catkin_cmake_args' from command line to 'None'
+[0.257s] Level 5:colcon.colcon_core.verb:set package 'gz_ros2_control_tests' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.257s] DEBUG:colcon.colcon_core.verb:Building package 'gz_ros2_control_tests' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/maycon/repositorios/tac-unb/aula-2/ws/build/gz_ros2_control_tests', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/maycon/repositorios/tac-unb/aula-2/ws/install/gz_ros2_control_tests', 'merge_install': False, 'path': '/home/maycon/repositorios/tac-unb/aula-2/ws/src/gz_ros2_control/gz_ros2_control_tests', 'symlink_install': False, 'test_result_base': None}
+[0.257s] Level 5:colcon.colcon_core.verb:set package 'ign_ros2_control_demos' build argument 'cmake_args' from command line to 'None'
+[0.257s] Level 5:colcon.colcon_core.verb:set package 'ign_ros2_control_demos' build argument 'cmake_target' from command line to 'None'
+[0.257s] Level 5:colcon.colcon_core.verb:set package 'ign_ros2_control_demos' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.257s] Level 5:colcon.colcon_core.verb:set package 'ign_ros2_control_demos' build argument 'cmake_clean_cache' from command line to 'False'
+[0.257s] Level 5:colcon.colcon_core.verb:set package 'ign_ros2_control_demos' build argument 'cmake_clean_first' from command line to 'False'
+[0.257s] Level 5:colcon.colcon_core.verb:set package 'ign_ros2_control_demos' build argument 'cmake_force_configure' from command line to 'False'
+[0.257s] Level 5:colcon.colcon_core.verb:set package 'ign_ros2_control_demos' build argument 'ament_cmake_args' from command line to 'None'
+[0.257s] Level 5:colcon.colcon_core.verb:set package 'ign_ros2_control_demos' build argument 'catkin_cmake_args' from command line to 'None'
+[0.257s] Level 5:colcon.colcon_core.verb:set package 'ign_ros2_control_demos' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.257s] DEBUG:colcon.colcon_core.verb:Building package 'ign_ros2_control_demos' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/maycon/repositorios/tac-unb/aula-2/ws/build/ign_ros2_control_demos', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos', 'merge_install': False, 'path': '/home/maycon/repositorios/tac-unb/aula-2/ws/src/gz_ros2_control/ign_ros2_control_demos', 'symlink_install': False, 'test_result_base': None}
+[0.257s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.258s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.258s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/maycon/repositorios/tac-unb/aula-2/ws/src/gz_ros2_control/ign_ros2_control' with build type 'ament_cmake'
+[0.258s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/maycon/repositorios/tac-unb/aula-2/ws/src/gz_ros2_control/ign_ros2_control'
+[0.260s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.261s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.261s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.263s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/maycon/repositorios/tac-unb/aula-2/ws/src/my_package' with build type 'ament_python'
+[0.263s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_package', 'ament_prefix_path')
+[0.263s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maycon/repositorios/tac-unb/aula-2/ws/install/my_package/share/my_package/hook/ament_prefix_path.ps1'
+[0.264s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/maycon/repositorios/tac-unb/aula-2/ws/install/my_package/share/my_package/hook/ament_prefix_path.dsv'
+[0.265s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maycon/repositorios/tac-unb/aula-2/ws/install/my_package/share/my_package/hook/ament_prefix_path.sh'
+[0.266s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.266s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.272s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/maycon/repositorios/tac-unb/aula-2/ws/build/ign_ros2_control': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/maycon/repositorios/tac-unb/aula-2/ws/build/ign_ros2_control -- -j8 -l8
+[0.447s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/maycon/repositorios/tac-unb/aula-2/ws/src/my_package'
+[0.447s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.447s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.451s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/maycon/repositorios/tac-unb/aula-2/ws/build/ign_ros2_control' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/maycon/repositorios/tac-unb/aula-2/ws/build/ign_ros2_control -- -j8 -l8
+[0.478s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/maycon/repositorios/tac-unb/aula-2/ws/build/ign_ros2_control': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/maycon/repositorios/tac-unb/aula-2/ws/build/ign_ros2_control
+[0.488s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ign_ros2_control)
+[0.488s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/maycon/repositorios/tac-unb/aula-2/ws/build/ign_ros2_control' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/maycon/repositorios/tac-unb/aula-2/ws/build/ign_ros2_control
+[0.491s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control' for CMake module files
+[0.492s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control' for CMake config files
+[0.492s] Level 1:colcon.colcon_core.shell:create_environment_hook('ign_ros2_control', 'cmake_prefix_path')
+[0.492s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/share/ign_ros2_control/hook/cmake_prefix_path.ps1'
+[0.493s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/share/ign_ros2_control/hook/cmake_prefix_path.dsv'
+[0.493s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/share/ign_ros2_control/hook/cmake_prefix_path.sh'
+[0.493s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/lib'
+[0.494s] Level 1:colcon.colcon_core.shell:create_environment_hook('ign_ros2_control', 'ld_library_path_lib')
+[0.494s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/share/ign_ros2_control/hook/ld_library_path_lib.ps1'
+[0.494s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/share/ign_ros2_control/hook/ld_library_path_lib.dsv'
+[0.494s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/share/ign_ros2_control/hook/ld_library_path_lib.sh'
+[0.494s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/bin'
+[0.494s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/lib/pkgconfig/ign_ros2_control.pc'
+[0.495s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/lib/python3.10/site-packages'
+[0.495s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/bin'
+[0.495s] INFO:colcon.colcon_core.shell:Creating package script '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/share/ign_ros2_control/package.ps1'
+[0.496s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/share/ign_ros2_control/package.dsv'
+[0.497s] INFO:colcon.colcon_core.shell:Creating package script '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/share/ign_ros2_control/package.sh'
+[0.498s] INFO:colcon.colcon_core.shell:Creating package script '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/share/ign_ros2_control/package.bash'
+[0.499s] INFO:colcon.colcon_core.shell:Creating package script '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/share/ign_ros2_control/package.zsh'
+[0.499s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/share/colcon-core/packages/ign_ros2_control)
+[0.519s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ign_ros2_control)
+[0.520s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control' for CMake module files
+[0.520s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control' for CMake config files
+[0.520s] Level 1:colcon.colcon_core.shell:create_environment_hook('ign_ros2_control', 'cmake_prefix_path')
+[0.520s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/share/ign_ros2_control/hook/cmake_prefix_path.ps1'
+[0.521s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/share/ign_ros2_control/hook/cmake_prefix_path.dsv'
+[0.521s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/share/ign_ros2_control/hook/cmake_prefix_path.sh'
+[0.521s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/lib'
+[0.521s] Level 1:colcon.colcon_core.shell:create_environment_hook('ign_ros2_control', 'ld_library_path_lib')
+[0.521s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/share/ign_ros2_control/hook/ld_library_path_lib.ps1'
+[0.521s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/share/ign_ros2_control/hook/ld_library_path_lib.dsv'
+[0.522s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/share/ign_ros2_control/hook/ld_library_path_lib.sh'
+[0.522s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/bin'
+[0.522s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/lib/pkgconfig/ign_ros2_control.pc'
+[0.522s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/lib/python3.10/site-packages'
+[0.522s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/bin'
+[0.522s] INFO:colcon.colcon_core.shell:Creating package script '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/share/ign_ros2_control/package.ps1'
+[0.523s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/share/ign_ros2_control/package.dsv'
+[0.523s] INFO:colcon.colcon_core.shell:Creating package script '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/share/ign_ros2_control/package.sh'
+[0.523s] INFO:colcon.colcon_core.shell:Creating package script '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/share/ign_ros2_control/package.bash'
+[0.523s] INFO:colcon.colcon_core.shell:Creating package script '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/share/ign_ros2_control/package.zsh'
+[0.524s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/share/colcon-core/packages/ign_ros2_control)
+[0.524s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/maycon/repositorios/tac-unb/aula-2/ws/src/gz_ros2_control/gz_ros2_control_tests' with build type 'ament_cmake'
+[0.524s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/maycon/repositorios/tac-unb/aula-2/ws/src/gz_ros2_control/gz_ros2_control_tests'
+[0.524s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.524s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.527s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/maycon/repositorios/tac-unb/aula-2/ws/src/gz_ros2_control/ign_ros2_control_demos' with build type 'ament_cmake'
+[0.527s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/maycon/repositorios/tac-unb/aula-2/ws/src/gz_ros2_control/ign_ros2_control_demos'
+[0.527s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.527s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.535s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/maycon/repositorios/tac-unb/aula-2/ws/build/gz_ros2_control_tests': AMENT_PREFIX_PATH=/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control:/opt/ros/humble LD_LIBRARY_PATH=/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/maycon/repositorios/tac-unb/aula-2/ws/build/gz_ros2_control_tests -- -j8 -l8
+[0.537s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/maycon/repositorios/tac-unb/aula-2/ws/build/ign_ros2_control_demos': AMENT_PREFIX_PATH=/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control:/opt/ros/humble LD_LIBRARY_PATH=/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/maycon/repositorios/tac-unb/aula-2/ws/build/ign_ros2_control_demos -- -j8 -l8
+[0.605s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/maycon/repositorios/tac-unb/aula-2/ws/build/ign_ros2_control_demos' returned '0': AMENT_PREFIX_PATH=/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control:/opt/ros/humble LD_LIBRARY_PATH=/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/maycon/repositorios/tac-unb/aula-2/ws/build/ign_ros2_control_demos -- -j8 -l8
+[0.607s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/maycon/repositorios/tac-unb/aula-2/ws/build/gz_ros2_control_tests' returned '0': AMENT_PREFIX_PATH=/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control:/opt/ros/humble LD_LIBRARY_PATH=/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/maycon/repositorios/tac-unb/aula-2/ws/build/gz_ros2_control_tests -- -j8 -l8
+[0.625s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/maycon/repositorios/tac-unb/aula-2/ws/build/gz_ros2_control_tests': AMENT_PREFIX_PATH=/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control:/opt/ros/humble LD_LIBRARY_PATH=/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/maycon/repositorios/tac-unb/aula-2/ws/build/gz_ros2_control_tests
+[0.633s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/maycon/repositorios/tac-unb/aula-2/ws/build/ign_ros2_control_demos': AMENT_PREFIX_PATH=/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control:/opt/ros/humble LD_LIBRARY_PATH=/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/maycon/repositorios/tac-unb/aula-2/ws/build/ign_ros2_control_demos
+[0.636s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gz_ros2_control_tests)
+[0.636s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/gz_ros2_control_tests' for CMake module files
+[0.637s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/maycon/repositorios/tac-unb/aula-2/ws/build/gz_ros2_control_tests' returned '0': AMENT_PREFIX_PATH=/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control:/opt/ros/humble LD_LIBRARY_PATH=/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/maycon/repositorios/tac-unb/aula-2/ws/build/gz_ros2_control_tests
+[0.637s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/gz_ros2_control_tests' for CMake config files
+[0.637s] Level 1:colcon.colcon_core.shell:create_environment_hook('gz_ros2_control_tests', 'cmake_prefix_path')
+[0.637s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maycon/repositorios/tac-unb/aula-2/ws/install/gz_ros2_control_tests/share/gz_ros2_control_tests/hook/cmake_prefix_path.ps1'
+[0.638s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/maycon/repositorios/tac-unb/aula-2/ws/install/gz_ros2_control_tests/share/gz_ros2_control_tests/hook/cmake_prefix_path.dsv'
+[0.638s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maycon/repositorios/tac-unb/aula-2/ws/install/gz_ros2_control_tests/share/gz_ros2_control_tests/hook/cmake_prefix_path.sh'
+[0.638s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/gz_ros2_control_tests/lib'
+[0.638s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/gz_ros2_control_tests/bin'
+[0.638s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/gz_ros2_control_tests/lib/pkgconfig/gz_ros2_control_tests.pc'
+[0.639s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/gz_ros2_control_tests/lib/python3.10/site-packages'
+[0.639s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/gz_ros2_control_tests/bin'
+[0.639s] INFO:colcon.colcon_core.shell:Creating package script '/home/maycon/repositorios/tac-unb/aula-2/ws/install/gz_ros2_control_tests/share/gz_ros2_control_tests/package.ps1'
+[0.639s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/maycon/repositorios/tac-unb/aula-2/ws/install/gz_ros2_control_tests/share/gz_ros2_control_tests/package.dsv'
+[0.640s] INFO:colcon.colcon_core.shell:Creating package script '/home/maycon/repositorios/tac-unb/aula-2/ws/install/gz_ros2_control_tests/share/gz_ros2_control_tests/package.sh'
+[0.640s] INFO:colcon.colcon_core.shell:Creating package script '/home/maycon/repositorios/tac-unb/aula-2/ws/install/gz_ros2_control_tests/share/gz_ros2_control_tests/package.bash'
+[0.640s] INFO:colcon.colcon_core.shell:Creating package script '/home/maycon/repositorios/tac-unb/aula-2/ws/install/gz_ros2_control_tests/share/gz_ros2_control_tests/package.zsh'
+[0.640s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/maycon/repositorios/tac-unb/aula-2/ws/install/gz_ros2_control_tests/share/colcon-core/packages/gz_ros2_control_tests)
+[0.647s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ign_ros2_control_demos)
+[0.647s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos' for CMake module files
+[0.647s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/maycon/repositorios/tac-unb/aula-2/ws/build/ign_ros2_control_demos' returned '0': AMENT_PREFIX_PATH=/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control:/opt/ros/humble LD_LIBRARY_PATH=/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/maycon/repositorios/tac-unb/aula-2/ws/build/ign_ros2_control_demos
+[0.648s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos' for CMake config files
+[0.652s] Level 1:colcon.colcon_core.shell:create_environment_hook('ign_ros2_control_demos', 'cmake_prefix_path')
+[0.652s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos/hook/cmake_prefix_path.ps1'
+[0.652s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos/hook/cmake_prefix_path.dsv'
+[0.652s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos/hook/cmake_prefix_path.sh'
+[0.653s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/lib'
+[0.653s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/bin'
+[0.653s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/lib/pkgconfig/ign_ros2_control_demos.pc'
+[0.653s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/lib/python3.10/site-packages'
+[0.653s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/bin'
+[0.653s] INFO:colcon.colcon_core.shell:Creating package script '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos/package.ps1'
+[0.654s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos/package.dsv'
+[0.654s] INFO:colcon.colcon_core.shell:Creating package script '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos/package.sh'
+[0.654s] INFO:colcon.colcon_core.shell:Creating package script '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos/package.bash'
+[0.654s] INFO:colcon.colcon_core.shell:Creating package script '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos/package.zsh'
+[0.654s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/colcon-core/packages/ign_ros2_control_demos)
+[0.659s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gz_ros2_control_tests)
+[0.660s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/gz_ros2_control_tests' for CMake module files
+[0.660s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/gz_ros2_control_tests' for CMake config files
+[0.660s] Level 1:colcon.colcon_core.shell:create_environment_hook('gz_ros2_control_tests', 'cmake_prefix_path')
+[0.661s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maycon/repositorios/tac-unb/aula-2/ws/install/gz_ros2_control_tests/share/gz_ros2_control_tests/hook/cmake_prefix_path.ps1'
+[0.661s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/maycon/repositorios/tac-unb/aula-2/ws/install/gz_ros2_control_tests/share/gz_ros2_control_tests/hook/cmake_prefix_path.dsv'
+[0.661s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maycon/repositorios/tac-unb/aula-2/ws/install/gz_ros2_control_tests/share/gz_ros2_control_tests/hook/cmake_prefix_path.sh'
+[0.662s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/gz_ros2_control_tests/lib'
+[0.662s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/gz_ros2_control_tests/bin'
+[0.662s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/gz_ros2_control_tests/lib/pkgconfig/gz_ros2_control_tests.pc'
+[0.662s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/gz_ros2_control_tests/lib/python3.10/site-packages'
+[0.663s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/gz_ros2_control_tests/bin'
+[0.663s] INFO:colcon.colcon_core.shell:Creating package script '/home/maycon/repositorios/tac-unb/aula-2/ws/install/gz_ros2_control_tests/share/gz_ros2_control_tests/package.ps1'
+[0.663s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/maycon/repositorios/tac-unb/aula-2/ws/install/gz_ros2_control_tests/share/gz_ros2_control_tests/package.dsv'
+[0.664s] INFO:colcon.colcon_core.shell:Creating package script '/home/maycon/repositorios/tac-unb/aula-2/ws/install/gz_ros2_control_tests/share/gz_ros2_control_tests/package.sh'
+[0.664s] INFO:colcon.colcon_core.shell:Creating package script '/home/maycon/repositorios/tac-unb/aula-2/ws/install/gz_ros2_control_tests/share/gz_ros2_control_tests/package.bash'
+[0.665s] INFO:colcon.colcon_core.shell:Creating package script '/home/maycon/repositorios/tac-unb/aula-2/ws/install/gz_ros2_control_tests/share/gz_ros2_control_tests/package.zsh'
+[0.665s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/maycon/repositorios/tac-unb/aula-2/ws/install/gz_ros2_control_tests/share/colcon-core/packages/gz_ros2_control_tests)
+[0.683s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ign_ros2_control_demos)
+[0.683s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos' for CMake module files
+[0.684s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos' for CMake config files
+[0.684s] Level 1:colcon.colcon_core.shell:create_environment_hook('ign_ros2_control_demos', 'cmake_prefix_path')
+[0.684s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos/hook/cmake_prefix_path.ps1'
+[0.685s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos/hook/cmake_prefix_path.dsv'
+[0.685s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos/hook/cmake_prefix_path.sh'
+[0.685s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/lib'
+[0.685s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/bin'
+[0.686s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/lib/pkgconfig/ign_ros2_control_demos.pc'
+[0.686s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/lib/python3.10/site-packages'
+[0.686s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/bin'
+[0.686s] INFO:colcon.colcon_core.shell:Creating package script '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos/package.ps1'
+[0.687s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos/package.dsv'
+[0.687s] INFO:colcon.colcon_core.shell:Creating package script '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos/package.sh'
+[0.687s] INFO:colcon.colcon_core.shell:Creating package script '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos/package.bash'
+[0.688s] INFO:colcon.colcon_core.shell:Creating package script '/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/ign_ros2_control_demos/package.zsh'
+[0.688s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/maycon/repositorios/tac-unb/aula-2/ws/install/ign_ros2_control_demos/share/colcon-core/packages/ign_ros2_control_demos)
+[0.804s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/maycon/repositorios/tac-unb/aula-2/ws/src/my_package': PYTHONPATH=/home/maycon/repositorios/tac-unb/aula-2/ws/build/my_package/prefix_override:/home/maycon/repositorios/tac-unb/aula-2/ws/install/my_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/my_package build --build-base /home/maycon/repositorios/tac-unb/aula-2/ws/build/my_package/build install --record /home/maycon/repositorios/tac-unb/aula-2/ws/build/my_package/install.log --single-version-externally-managed install_data
+[0.995s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/my_package' for CMake module files
+[0.996s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/maycon/repositorios/tac-unb/aula-2/ws/src/my_package' returned '0': PYTHONPATH=/home/maycon/repositorios/tac-unb/aula-2/ws/build/my_package/prefix_override:/home/maycon/repositorios/tac-unb/aula-2/ws/install/my_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/my_package build --build-base /home/maycon/repositorios/tac-unb/aula-2/ws/build/my_package/build install --record /home/maycon/repositorios/tac-unb/aula-2/ws/build/my_package/install.log --single-version-externally-managed install_data
+[0.996s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/my_package' for CMake config files
+[0.997s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/my_package/lib'
+[0.997s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/my_package/bin'
+[0.997s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/my_package/lib/pkgconfig/my_package.pc'
+[0.997s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/my_package/lib/python3.10/site-packages'
+[0.997s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_package', 'pythonpath')
+[0.997s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maycon/repositorios/tac-unb/aula-2/ws/install/my_package/share/my_package/hook/pythonpath.ps1'
+[0.998s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/maycon/repositorios/tac-unb/aula-2/ws/install/my_package/share/my_package/hook/pythonpath.dsv'
+[0.998s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maycon/repositorios/tac-unb/aula-2/ws/install/my_package/share/my_package/hook/pythonpath.sh'
+[0.998s] Level 1:colcon.colcon_core.environment:checking '/home/maycon/repositorios/tac-unb/aula-2/ws/install/my_package/bin'
+[0.998s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(my_package)
+[0.999s] INFO:colcon.colcon_core.shell:Creating package script '/home/maycon/repositorios/tac-unb/aula-2/ws/install/my_package/share/my_package/package.ps1'
+[0.999s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/maycon/repositorios/tac-unb/aula-2/ws/install/my_package/share/my_package/package.dsv'
+[0.999s] INFO:colcon.colcon_core.shell:Creating package script '/home/maycon/repositorios/tac-unb/aula-2/ws/install/my_package/share/my_package/package.sh'
+[0.999s] INFO:colcon.colcon_core.shell:Creating package script '/home/maycon/repositorios/tac-unb/aula-2/ws/install/my_package/share/my_package/package.bash'
+[0.999s] INFO:colcon.colcon_core.shell:Creating package script '/home/maycon/repositorios/tac-unb/aula-2/ws/install/my_package/share/my_package/package.zsh'
+[1.000s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/maycon/repositorios/tac-unb/aula-2/ws/install/my_package/share/colcon-core/packages/my_package)
+[1.000s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.000s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.000s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.000s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.005s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.005s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.005s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.013s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.014s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/maycon/repositorios/tac-unb/aula-2/ws/install/local_setup.ps1'
+[1.014s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/maycon/repositorios/tac-unb/aula-2/ws/install/_local_setup_util_ps1.py'
+[1.016s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/maycon/repositorios/tac-unb/aula-2/ws/install/setup.ps1'
+[1.017s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/maycon/repositorios/tac-unb/aula-2/ws/install/local_setup.sh'
+[1.018s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/maycon/repositorios/tac-unb/aula-2/ws/install/_local_setup_util_sh.py'
+[1.018s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/maycon/repositorios/tac-unb/aula-2/ws/install/setup.sh'
+[1.019s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/maycon/repositorios/tac-unb/aula-2/ws/install/local_setup.bash'
+[1.020s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/maycon/repositorios/tac-unb/aula-2/ws/install/setup.bash'
+[1.021s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/maycon/repositorios/tac-unb/aula-2/ws/install/local_setup.zsh'
+[1.022s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/maycon/repositorios/tac-unb/aula-2/ws/install/setup.zsh'
