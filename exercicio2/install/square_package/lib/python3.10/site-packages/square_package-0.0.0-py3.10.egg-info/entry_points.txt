@@ -1,3 +1,0 @@
-[console_scripts]
-square = square_package.square:main
-

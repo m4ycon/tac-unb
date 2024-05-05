@@ -1,3 +1,0 @@
-[console_scripts]
-circle = circle_package.circle:main
-
