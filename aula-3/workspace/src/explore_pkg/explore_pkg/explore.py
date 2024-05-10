@@ -17,18 +17,15 @@ class Publisher(Node):
     self.subscription_odom = self.create_subscription(
         Odometry, '/odom', self.odom_callback, 10)
 
-    timer_period = .5
-    self.timer = self.create_timer(timer_period, self.run)
-
     self.i = 0
     self.has_obstacle_foward = False
     self.scan = LaserScan()
-    self.angle_min = 0
-    self.angle_max = 0
-    self.angle_increment = 0
     self.actual_pos = Point()
     self.actual_ori = Quaternion()
     self.destiny = Point()
+
+    timer_period = .5
+    self.timer = self.create_timer(timer_period, self.run)
 
   def run(self):
     if self.has_obstacle_foward:
@@ -41,13 +38,12 @@ class Publisher(Node):
   def scan_callback(self, scan: LaserScan):
     self.scan = scan
 
-    regional_angle = 30
+    regional_ang = 30
+    mid_ang = -90
+    front_region = self.get_range_interval(
+        mid_ang - regional_ang, mid_ang + regional_ang)
+
     dist_threshold = .5
-
-    mid_index = self.calc_range_index_by_rad(-PI/2)
-    front_region = scan.ranges[int(
-        mid_index - regional_angle):int(mid_index + regional_angle)]
-
     closests = [x for x in front_region if x <= dist_threshold and x != 'inf']
     self.has_obstacle_foward = len(closests) > 0
 
@@ -61,8 +57,8 @@ class Publisher(Node):
     self.set_vel(x, 0., 0.)
     self.get_logger().info(f'Publishing: "walk_foward", i: {self.i}')
 
-  def stop_and_rotate(self, angular: float = PI/4):
-    self.set_ang(angular)
+  def stop_and_rotate(self, angular: float = 45):
+    self.set_ang(self.ang_to_rad(angular))
     self.get_logger().info(f'Publishing: "stop_and_rotate", i: {self.i}')
 
   def set_vel(self, x: float, y: float, z: float):
@@ -80,19 +76,27 @@ class Publisher(Node):
     msg.angular.z = float(angular)
     self.publisher_vel.publish(msg)
 
-  def calc_range_index_by_rad(self, rad: float):
-    if self.scan.angle_increment == 0:
-      return 0
-    # ang = angle_min + angle_increment * index
-    # index = (ang - angle_min) / angle_increment
-    return (rad - self.scan.angle_min) / self.scan.angle_increment
-
   def set_destiny(self, x: float, y: float):
     point = Point()
     point.x = x
     point.y = y
     point.z = 0
     self.destiny = point
+
+  def get_range_interval(self, start_ang: float, end_ang: float):
+    start_rad, end_rad = self.ang_to_rad(start_ang), self.ang_to_rad(end_ang)
+    start_index, end_index = self.calc_range_index_by_rad(
+        start_rad), self.calc_range_index_by_rad(end_rad)
+    return self.scan.ranges[int(start_index):int(end_index)]
+
+  def calc_range_index_by_rad(self, rad: float):
+    if self.scan.angle_increment == 0:
+      return 0
+    # ang = angle_min + angle_increment * index => index = (ang - angle_min) / angle_increment
+    return (rad - self.scan.angle_min) / self.scan.angle_increment
+
+  def ang_to_rad(self, ang: float):
+    return ang * PI / 180
 
 
 def main(args=None):
