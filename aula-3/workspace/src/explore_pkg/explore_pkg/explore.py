@@ -18,20 +18,28 @@ class Publisher(Node):
         Odometry, '/odom', self.odom_callback, 10)
 
     self.i = 0
-    self.has_obstacle_foward = False
     self.scan = LaserScan()
     self.actual_pos = Point()
     self.actual_ori = Quaternion()
     self.destiny = Point()
 
+    self.has_obstacle_foward = False
+    self.turn_left = False
+    self.should_adjust = False
+
     timer_period = .5
     self.timer = self.create_timer(timer_period, self.run)
 
   def run(self):
-    if self.has_obstacle_foward:
+    if self.has_obstacle_foward or self.should_adjust:
       self.stop_and_rotate()
     else:
       self.walk_foward(.2)
+
+    self.get_logger().info(
+        f'Actual position: {self.actual_pos.x}, {self.actual_pos.y}, {self.actual_pos.z}')
+    self.get_logger().info(
+        f'Actual orientation: {self.actual_ori.x}, {self.actual_ori.y}, {self.actual_ori.z}, {self.actual_ori.w}')
 
     self.i += 1
 
@@ -50,15 +58,19 @@ class Publisher(Node):
   def odom_callback(self, odom: Odometry):
     self.actual_pos = odom.pose.pose.position
     self.actual_ori = odom.pose.pose.orientation
-    self.get_logger().info(
-        f'Actual position: {self.actual_pos.x}, {self.actual_pos.y}')
+
+    co = self.actual_pos.x - self.destiny.x
+    ca = self.actual_pos.y - self.destiny.y
+    tan = ca / co
+    self.turn_left = tan - self.actual_ori.z > 0
+    self.should_adjust = abs(tan - self.actual_ori.z) > self.ang_to_rad(10)
 
   def walk_foward(self, x: float = 1.0):
     self.set_vel(x, 0., 0.)
     self.get_logger().info(f'Publishing: "walk_foward", i: {self.i}')
 
   def stop_and_rotate(self, angular: float = 45):
-    self.set_ang(self.ang_to_rad(angular))
+    self.set_ang(angular if self.turn_left else -angular)
     self.get_logger().info(f'Publishing: "stop_and_rotate", i: {self.i}')
 
   def set_vel(self, x: float, y: float, z: float):
@@ -73,14 +85,14 @@ class Publisher(Node):
     msg.linear.x = .0
     msg.linear.y = .0
     msg.linear.z = .0
-    msg.angular.z = float(angular)
+    msg.angular.z = float(self.ang_to_rad(angular))
     self.publisher_vel.publish(msg)
 
-  def set_destiny(self, x: float, y: float):
+  def set_destiny(self, x: float, y: float, z: float = 0.):
     point = Point()
     point.x = x
     point.y = y
-    point.z = 0
+    point.z = z
     self.destiny = point
 
   def get_range_interval(self, start_ang: float, end_ang: float):
@@ -103,6 +115,8 @@ def main(args=None):
   rclpy.init(args=args)
 
   minimal_publisher = Publisher()
+
+  minimal_publisher.set_destiny(5., 5.)
 
   rclpy.spin(minimal_publisher)
 
