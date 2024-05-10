@@ -11,41 +11,37 @@ class Publisher(Node):
     super().__init__('minimal_publisher')
     self.publisher_twist = self.create_publisher(Twist, '/cmd_vel', 10)
     self.subscription_scan = self.create_subscription(
-        LaserScan, '/scan', self.listener_callback, 10)
-    self.laser_scan = None
+        LaserScan, '/scan', self.scan_callback, 10)
 
     timer_period = .5
     self.timer = self.create_timer(timer_period, self.explore_walk)
     self.i = 0
 
   def explore_walk(self):
-    if self.has_obstacle_foward():
+    if self.has_obstacle_foward:
       self.stop_and_rotate()
     else:
       self.walk_foward(.2)
 
     self.i += 1
 
-  def listener_callback(self, msg: LaserScan):
-    self.laser_scan = msg
-
   def walk_foward(self, x: float = 1.0):
     self.set_vel(x, 0., 0.)
     self.get_logger().info(f'Publishing: "walk_foward", i: {self.i}')
 
-  def has_obstacle_foward(self, threshold: float = 1.0):
-    if self.laser_scan is None:
-      return False
+  def scan_callback(self, scan: LaserScan):
+    self.get_logger().info(f'mid_dist: {scan.ranges[len(scan.ranges)//2]}')
 
-    closest = min(self.laser_scan.ranges)
-    if closest < threshold:
-      min_index = self.laser_scan.ranges.index(closest)
-      angle = self.laser_scan.angle_min + min_index * self.laser_scan.angle_increment
-      mid_angle = (self.laser_scan.angle_min + self.laser_scan.angle_max) / 2
-      if abs(angle - mid_angle) < 2:
-        return True
+    regional_angle = 30
+    mid_angle = len(scan.ranges) // 2
+    front_region = scan.ranges[:int(regional_angle/2)]
 
-  def stop_and_rotate(self, angular: float = PI/2):
+    dist_threshold = 1.
+    closests = [x for x in front_region if x <= dist_threshold and x != 'inf']
+    self.get_logger().info(f'Closests: {closests}')
+    self.has_obstacle_foward = len(closests) > 0
+
+  def stop_and_rotate(self, angular: float = PI/4):
     self.set_ang(angular)
     self.get_logger().info(f'Publishing: "stop_and_rotate", i: {self.i}')
 
