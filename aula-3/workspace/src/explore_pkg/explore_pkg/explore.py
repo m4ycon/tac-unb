@@ -15,7 +15,12 @@ class Publisher(Node):
 
     timer_period = .5
     self.timer = self.create_timer(timer_period, self.explore_walk)
+
     self.i = 0
+    self.has_obstacle_foward = False
+    self.angle_min = 0
+    self.angle_max = 0
+    self.angle_increment = 0
 
   def explore_walk(self):
     if self.has_obstacle_foward:
@@ -30,15 +35,16 @@ class Publisher(Node):
     self.get_logger().info(f'Publishing: "walk_foward", i: {self.i}')
 
   def scan_callback(self, scan: LaserScan):
-    self.get_logger().info(f'mid_dist: {scan.ranges[len(scan.ranges)//2]}')
+    self.angle_min, self.angle_max, self.angle_increment = scan.angle_min, scan.angle_max, scan.angle_increment
 
     regional_angle = 30
-    mid_angle = len(scan.ranges) // 2
-    front_region = scan.ranges[:int(regional_angle/2)]
+    dist_threshold = .5
 
-    dist_threshold = 1.
+    mid_index = self.calc_range_index_by_rad(-PI/2)
+    front_region = scan.ranges[int(
+        mid_index - regional_angle):int(mid_index + regional_angle)]
+
     closests = [x for x in front_region if x <= dist_threshold and x != 'inf']
-    self.get_logger().info(f'Closests: {closests}')
     self.has_obstacle_foward = len(closests) > 0
 
   def stop_and_rotate(self, angular: float = PI/4):
@@ -59,6 +65,13 @@ class Publisher(Node):
     msg.linear.z = .0
     msg.angular.z = float(angular)
     self.publisher_twist.publish(msg)
+
+  def calc_range_index_by_rad(self, rad: float):
+    if self.angle_increment == 0:
+      return 0
+    # ang = angle_min + angle_increment * index
+    # index = (ang - angle_min) / angle_increment
+    return (rad - self.angle_min) / self.angle_increment
 
 
 def main(args=None):
