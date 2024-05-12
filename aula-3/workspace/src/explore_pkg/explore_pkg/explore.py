@@ -1,10 +1,12 @@
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Twist
-from math import pi as PI
 from sensor_msgs.msg import LaserScan
 from geometry_msgs.msg import Point, Quaternion
 from nav_msgs.msg import Odometry
+import math
+
+PI = math.pi
 
 
 class Publisher(Node):
@@ -26,12 +28,19 @@ class Publisher(Node):
     self.has_obstacle_foward = False
     self.turn_left = False
     self.should_adjust = False
+    self.arrived = False
 
-    timer_period = .5
+    timer_period = .1
     self.timer = self.create_timer(timer_period, self.run)
 
   def run(self):
-    if self.has_obstacle_foward or self.should_adjust:
+    if self.arrived:
+      self.set_vel(0., 0., 0.)
+      self.set_ang(0.)
+      self.get_logger().info(
+          f'Arrived ({self.actual_pos.x}, {self.actual_pos.y})')
+      return
+    elif self.has_obstacle_foward or self.should_adjust:
       self.stop_and_rotate()
     else:
       self.walk_foward(.2)
@@ -61,15 +70,21 @@ class Publisher(Node):
 
     co = self.actual_pos.x - self.destiny.x
     ca = self.actual_pos.y - self.destiny.y
+    hip = math.sqrt(co**2 + ca**2)
+    # cos = co / hip
+    # sin = ca / hip
     tan = ca / co
+
     self.turn_left = tan - self.actual_ori.z > 0
     self.should_adjust = abs(tan - self.actual_ori.z) > self.ang_to_rad(10)
+    self.arrived = hip < .05
 
   def walk_foward(self, x: float = 1.0):
     self.set_vel(x, 0., 0.)
     self.get_logger().info(f'Publishing: "walk_foward", i: {self.i}')
 
   def stop_and_rotate(self, angular: float = 45):
+    self.set_vel(0., 0., 0.)
     self.set_ang(angular if self.turn_left else -angular)
     self.get_logger().info(f'Publishing: "stop_and_rotate", i: {self.i}')
 
@@ -82,9 +97,6 @@ class Publisher(Node):
 
   def set_ang(self, angular: float):
     msg = Twist()
-    msg.linear.x = .0
-    msg.linear.y = .0
-    msg.linear.z = .0
     msg.angular.z = float(self.ang_to_rad(angular))
     self.publisher_vel.publish(msg)
 
