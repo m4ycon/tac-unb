@@ -5,6 +5,8 @@ from sensor_msgs.msg import LaserScan
 from geometry_msgs.msg import Point, Quaternion
 from nav_msgs.msg import Odometry
 import math
+import tf_transformations as tf
+
 
 PI = math.pi
 
@@ -43,7 +45,7 @@ class Publisher(Node):
     elif self.has_obstacle_foward or self.should_adjust:
       self.stop_and_rotate()
     else:
-      self.walk_foward(.2)
+      self.walk_foward(.5)
 
     self.get_logger().info(
         f'Actual position: {self.actual_pos.x}, {self.actual_pos.y}, {self.actual_pos.z}')
@@ -68,16 +70,17 @@ class Publisher(Node):
     self.actual_pos = odom.pose.pose.position
     self.actual_ori = odom.pose.pose.orientation
 
-    co = self.actual_pos.x - self.destiny.x
-    ca = self.actual_pos.y - self.destiny.y
-    hip = math.sqrt(co**2 + ca**2)
-    # cos = co / hip
-    # sin = ca / hip
-    tan = ca / co
+    dx, dy = self.destiny.x - self.actual_pos.x, self.destiny.y - self.actual_pos.y
+    dist = math.sqrt(dx**2 + dy**2)
+    actual_yaw = math.atan2(dy, dx)
 
-    self.turn_left = tan - self.actual_ori.z > 0
-    self.should_adjust = abs(tan - self.actual_ori.z) > self.ang_to_rad(10)
-    self.arrived = hip < .05
+    (roll, pitch, yaw) = tf.euler_from_quaternion(
+        [self.actual_ori.x, self.actual_ori.y, self.actual_ori.z, self.actual_ori.w])
+
+    diff = actual_yaw - yaw
+    self.turn_left = diff > 0
+    self.should_adjust = abs(diff) > self.ang_to_rad(2)
+    self.arrived = dist < .05
 
   def walk_foward(self, x: float = 1.0):
     self.set_vel(x, 0., 0.)
@@ -128,7 +131,7 @@ def main(args=None):
 
   minimal_publisher = Publisher()
 
-  minimal_publisher.set_destiny(5., 5.)
+  minimal_publisher.set_destiny(-5., 3.)
 
   rclpy.spin(minimal_publisher)
 

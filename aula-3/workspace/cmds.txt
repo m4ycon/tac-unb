@@ -20,3 +20,6 @@ sudo code create3.urdf.xacro
 
 ros2 run nav2_map_server map_saver_cli -f "my_map"
 
+---
+
+sudo apt install ros-$ROS_DISTRO-turtle-tf2-py ros-$ROS_DISTRO-tf2-tools ros-$ROS_DISTRO-tf-transformations
