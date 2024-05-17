@@ -57,10 +57,10 @@ class Publisher(Node):
     self.should_adjust = False
     self.arrived = False
 
-    self.angle_pid = PID(.5, 0, 0)
-    self.vel_pid = PID(.5, 0, 0)
-    self.ang = 0.  # rad
-    self.vel = 0.  # m/s
+    self.angle_pid = PID(.5, 1e-5, 0)
+    self.vel_pid = PID(.5, 1e-5, 0)
+    self.ang = 0. # rad
+    self.vel = 0.
 
     timer_period = .1
     self.timer = self.create_timer(timer_period, self.run)
