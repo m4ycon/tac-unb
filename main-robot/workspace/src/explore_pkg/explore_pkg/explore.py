@@ -4,11 +4,37 @@ from geometry_msgs.msg import Twist
 from sensor_msgs.msg import LaserScan
 from geometry_msgs.msg import Point, Quaternion
 from nav_msgs.msg import Odometry
+import time
 import math
 import tf_transformations as tf
 
 
 PI = math.pi
+
+
+class PID:
+  def __init__(self, kp: float, ki: float, kd: float):
+    self.kp = kp
+    self.ki = ki
+    self.kd = kd
+    self.prev_error = 0
+    self.integral = 0
+    self.prev_time = time.time()
+
+  def update(self, error: float):
+    current_time = time.time()
+    dt = current_time - self.prev_time
+
+    self.integral += error * dt
+    derivative = (error - self.prev_error) / dt
+    self.prev_error = error
+    self.prev_time = current_time
+
+    p = self.kp * error
+    i = self.ki * self.integral
+    d = self.kd * derivative
+
+    return p + i + d
 
 
 class Publisher(Node):
@@ -28,9 +54,13 @@ class Publisher(Node):
     self.destiny = Point()
 
     self.has_obstacle_foward = False
-    self.turn_left = False
     self.should_adjust = False
     self.arrived = False
+
+    self.angle_pid = PID(.5, 0, 0)
+    self.vel_pid = PID(.5, 0, 0)
+    self.ang = 0.  # rad
+    self.vel = 0.  # m/s
 
     timer_period = .1
     self.timer = self.create_timer(timer_period, self.run)
@@ -38,14 +68,13 @@ class Publisher(Node):
   def run(self):
     if self.arrived:
       self.set_vel(0., 0., 0.)
-      self.set_ang(0.)
       self.get_logger().info(
           f'Arrived ({self.actual_pos.x}, {self.actual_pos.y})')
       return
     elif self.has_obstacle_foward or self.should_adjust:
       self.stop_and_rotate()
     else:
-      self.walk_foward(.5)
+      self.walk_foward()
 
     self.get_logger().info(
         f'Actual position: {self.actual_pos.x}, {self.actual_pos.y}, {self.actual_pos.z}')
@@ -59,8 +88,9 @@ class Publisher(Node):
 
     regional_ang = 30
     mid_ang = -90
-    front_region = self.get_range_interval(
-        mid_ang - regional_ang, mid_ang + regional_ang)
+    start_rad = math.radians(mid_ang - regional_ang)
+    end_rad = math.radians(mid_ang + regional_ang)
+    front_region = self.get_range_interval(start_rad, end_rad)
 
     dist_threshold = .5
     closests = [x for x in front_region if x <= dist_threshold and x != 'inf']
@@ -72,35 +102,37 @@ class Publisher(Node):
 
     dx, dy = self.destiny.x - self.actual_pos.x, self.destiny.y - self.actual_pos.y
     dist = math.sqrt(dx**2 + dy**2)
-    actual_yaw = math.atan2(dy, dx)
+    ref_yaw = math.atan2(dy, dx)
 
-    (roll, pitch, yaw) = tf.euler_from_quaternion(
+    (roll, pitch, actual_yaw) = tf.euler_from_quaternion(
         [self.actual_ori.x, self.actual_ori.y, self.actual_ori.z, self.actual_ori.w])
 
-    diff = actual_yaw - yaw
-    self.turn_left = diff > 0
-    self.should_adjust = abs(diff) > self.ang_to_rad(2)
-    self.arrived = dist < .05
+    yaw_diff = ref_yaw - actual_yaw
+    self.turn_left = yaw_diff > 0
+    self.should_adjust = abs(yaw_diff) > math.radians(2)
+    self.arrived = dist < .01
 
-  def walk_foward(self, x: float = 1.0):
-    self.set_vel(x, 0., 0.)
+    self.ang = self.angle_pid.update(yaw_diff)
+    self.vel = self.vel_pid.update(dist)
+
+  def walk_to_destiny(self):
+    self.set_vel(self.vel, 0., 0., self.ang)
+    self.get_logger().info(f'Publishing: "walk_to_destiny", i: {self.i}')
+
+  def walk_foward(self):
+    self.set_vel(self.vel, 0., 0., self.ang)
     self.get_logger().info(f'Publishing: "walk_foward", i: {self.i}')
 
-  def stop_and_rotate(self, angular: float = 45):
-    self.set_vel(0., 0., 0.)
-    self.set_ang(angular if self.turn_left else -angular)
+  def stop_and_rotate(self):
+    self.set_vel(0., 0., 0., self.ang)
     self.get_logger().info(f'Publishing: "stop_and_rotate", i: {self.i}')
 
-  def set_vel(self, x: float, y: float, z: float):
+  def set_vel(self, x: float, y: float, z: float, angular_z: float = 0.):
     msg = Twist()
     msg.linear.x = float(x)
     msg.linear.y = float(y)
     msg.linear.z = float(z)
-    self.publisher_vel.publish(msg)
-
-  def set_ang(self, angular: float):
-    msg = Twist()
-    msg.angular.z = float(self.ang_to_rad(angular))
+    msg.angular.z = float(angular_z)
     self.publisher_vel.publish(msg)
 
   def set_destiny(self, x: float, y: float, z: float = 0.):
@@ -110,8 +142,7 @@ class Publisher(Node):
     point.z = z
     self.destiny = point
 
-  def get_range_interval(self, start_ang: float, end_ang: float):
-    start_rad, end_rad = self.ang_to_rad(start_ang), self.ang_to_rad(end_ang)
+  def get_range_interval(self, start_rad: float, end_rad: float):
     start_index, end_index = self.calc_range_index_by_rad(
         start_rad), self.calc_range_index_by_rad(end_rad)
     return self.scan.ranges[int(start_index):int(end_index)]
@@ -121,9 +152,6 @@ class Publisher(Node):
       return 0
     # ang = angle_min + angle_increment * index => index = (ang - angle_min) / angle_increment
     return (rad - self.scan.angle_min) / self.scan.angle_increment
-
-  def ang_to_rad(self, ang: float):
-    return ang * PI / 180
 
 
 def main(args=None):
