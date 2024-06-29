@@ -4,36 +4,35 @@
     <Fallback>
       <Sequence>
         <Sequence name="GetSample">
-          <GoToNurse/>
-          <AuthenticateNurse/>
+          <GoToDestination x=""
+                           y=""/>
+          <Authenticate token=""/>
           <WaitForSample/>
         </Sequence>
-        <GoToDestination/>
+        <GoToDestination x=""
+                         y=""/>
         <Sequence name="DeliverSample">
-          <WaitForRobot/>
-          <AuthenticateRobot/>
+          <Authenticate token=""/>
           <WaitForCollection/>
         </Sequence>
       </Sequence>
-      <GoBackToStorage/>
+      <GoToDestination x=""
+                       y=""/>
     </Fallback>
   </BehaviorTree>
 
   <!-- Description of Node Models (used by Groot) -->
   <TreeNodesModel>
-    <Action ID="AuthenticateNurse"
-            editable="true"/>
-    <Action ID="AuthenticateRobot"
-            editable="true"/>
-    <Action ID="GoBackToStorage"
-            editable="true"/>
+    <Action ID="Authenticate"
+            editable="true">
+      <output_port name="token"/>
+    </Action>
     <Action ID="GoToDestination"
-            editable="true"/>
-    <Action ID="GoToNurse"
-            editable="true"/>
+            editable="true">
+      <input_port name="x"/>
+      <input_port name="y"/>
+    </Action>
     <Action ID="WaitForCollection"
-            editable="true"/>
-    <Action ID="WaitForRobot"
             editable="true"/>
     <Action ID="WaitForSample"
             editable="true"/>
