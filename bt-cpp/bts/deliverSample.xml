@@ -4,29 +4,27 @@
     <Fallback>
       <Sequence>
         <Sequence name="GetSample">
-          <GoToDestination x=""
-                           y=""/>
-          <Authenticate token=""/>
+          <GoToDestination x="3"
+                           y="4"/>
+          <Authenticated/>
           <WaitForSample/>
         </Sequence>
-        <GoToDestination x=""
-                         y=""/>
+        <GoToDestination x="1"
+                         y="-2"/>
         <Sequence name="DeliverSample">
-          <Authenticate token=""/>
+          <Authenticated/>
           <WaitForCollection/>
         </Sequence>
       </Sequence>
-      <GoToDestination x=""
-                       y=""/>
+      <GoToDestination x="0"
+                       y="0"/>
     </Fallback>
   </BehaviorTree>
 
   <!-- Description of Node Models (used by Groot) -->
   <TreeNodesModel>
-    <Action ID="Authenticate"
-            editable="true">
-      <output_port name="token"/>
-    </Action>
+    <Condition ID="Authenticated"
+               editable="true"/>
     <Action ID="GoToDestination"
             editable="true">
       <input_port name="x"/>

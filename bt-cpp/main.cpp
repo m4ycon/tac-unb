@@ -5,22 +5,22 @@
 using namespace std;
 using namespace BT;
 
-class Authenticate : public SyncActionNode
+class Authenticated : public SyncActionNode
 {
 public:
-  Authenticate(const string &name, const NodeConfiguration &config) : SyncActionNode(name, config)
+  Authenticated(const string &name, const NodeConfiguration &config) : SyncActionNode(name, config)
   {
   }
 
   NodeStatus tick() override
   {
-    cout << "Authenticate: " << this->name() << endl;
+    cout << "Authenticated: " << this->name() << endl;
     return NodeStatus::SUCCESS;
   }
 
   static PortsList providedPorts()
   {
-    return {OutputPort<std::string>("token")};
+    return {};
   }
 };
 
@@ -33,13 +33,23 @@ public:
 
   NodeStatus tick() override
   {
-    cout << "GoToDestination: " << this->name() << endl;
+    auto [x, y] = getDestination();
+    auto info = "(" + to_string(x) + ", " + to_string(y) + ")";
+
+    cout << "GoToDestination: " << this->name() << " " << info << endl;
     return NodeStatus::SUCCESS;
   }
 
   static PortsList providedPorts()
   {
-    return {InputPort<std::string>("x"), InputPort<std::string>("y")};
+    return {InputPort<int>("x"), InputPort<int>("y")};
+  }
+
+private:
+  pair<int, int> getDestination() {
+    auto x = getInput<int>("x");
+    auto y = getInput<int>("y");
+    return { x.value_or(0), y.value_or(0) };
   }
 };
 
@@ -85,7 +95,7 @@ int main()
 {
   BehaviorTreeFactory factory;
 
-  factory.registerNodeType<Authenticate>("Authenticate");
+  factory.registerNodeType<Authenticated>("Authenticated");
   factory.registerNodeType<GoToDestination>("GoToDestination");
   factory.registerNodeType<WaitForCollection>("WaitForCollection");
   factory.registerNodeType<WaitForSample>("WaitForSample");
