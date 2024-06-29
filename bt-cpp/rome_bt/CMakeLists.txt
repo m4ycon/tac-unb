@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(main)
+project(rome_bt)
 
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
@@ -25,6 +25,11 @@ behavior_trees launch
 DESTINATION share/${PROJECT_NAME}
 )
 
+# Install C++ behaviors
+set(BEHAVIOR_SOURCES
+src/bt_executor.cpp
+)
+
 set(TARGET_DEPENDS
     rclcpp
     behaviortree_cpp_v3
@@ -40,12 +45,12 @@ set(TARGET_DEPENDS
 )
 
 include_directories(include)
-add_executable(main src/main.cpp)
-ament_target_dependencies(main ${TARGET_DEPENDS})
-target_link_libraries(main ${YAML_CPP_LIBRARIES})
+add_executable(bt_executor src/bt_executor.cpp ${BEHAVIOR_SOURCES})
+ament_target_dependencies(bt_executor ${TARGET_DEPENDS})
+target_link_libraries(bt_executor ${YAML_CPP_LIBRARIES})
 
 install(TARGETS
-main
+bt_executor
 DESTINATION lib/${PROJECT_NAME})
 
 

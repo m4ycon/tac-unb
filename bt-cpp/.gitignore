@@ -1,6 +1,12 @@
-main
 CMakeFiles
 CMakeCache.txt
 cmake_install.cmake
-ament_*
 CTest*
+ament_*
+Makefile
+
+**/install
+**/build
+**/log
+
+bt_executor
