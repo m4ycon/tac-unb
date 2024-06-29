@@ -1,2 +1,0 @@
-// para rodar
-cmake . && make && ./main

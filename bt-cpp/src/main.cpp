@@ -1,6 +1,7 @@
 #include <iostream>
 #include "behaviortree_cpp_v3/bt_factory.h"
 #include "behaviortree_cpp_v3/action_node.h"
+#include "rclcpp/rclcpp.hpp"
 
 using namespace std;
 using namespace BT;
@@ -34,9 +35,7 @@ public:
   NodeStatus tick() override
   {
     auto [x, y] = getDestination();
-    auto info = "(" + to_string(x) + ", " + to_string(y) + ")";
-
-    cout << "GoToDestination: " << this->name() << " " << info << endl;
+    cout << "GoToDestination: " << this->name() << " " << "(" << x << ", " << y << ")" << endl;
     return NodeStatus::SUCCESS;
   }
 
