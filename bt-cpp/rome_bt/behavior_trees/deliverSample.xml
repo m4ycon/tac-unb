@@ -4,13 +4,13 @@
     <Fallback>
       <Sequence>
         <Sequence name="GetSample">
-          <GoToDestination x="3"
+          <GoToDestination x="-3"
                            y="4"/>
           <Authenticated/>
           <WaitForSample/>
         </Sequence>
-        <GoToDestination x="1"
-                         y="-2"/>
+        <GoToDestination x="2"
+                         y="2"/>
         <Sequence name="DeliverSample">
           <Authenticated/>
           <WaitForCollection/>

@@ -4,19 +4,16 @@ source /opt/ros/humble/setup.zsh
 
 ros2 pkg create --build-type ament_python --node-name my_node_name my_package_name
 
+
 ros2 launch turtlebot4_ignition_bringup turtlebot4_ignition.launch.py slam:=true rviz:=true nav2:=true
 
-colcon build
+ros2 launch turtlebot4_ignition_bringup turtlebot4_ignition.launch.py slam:=true nav2:=true
+
 source install/setup.zsh
-ros2 run explore_pkg explore
 
-
-
-
+colcon build
 cmake . && make
-
-ros2 launch rome_bt execute_bt.launch.py bt:="./behavior_trees/bt_example3.xml"
-
+ros2 launch rome_bt execute_bt.launch.py bt:="./behavior_trees/deliverSample.xml"
 
 
 --- problemas em ver o scan no rviz
